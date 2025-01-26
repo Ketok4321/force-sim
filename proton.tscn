@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo5c85sb1ufhu"]
+
+[ext_resource type="Script" path="res://particle.gd" id="1_kt7by"]
+
+[node name="proton" type="Node2D"]
+script = ExtResource("1_kt7by")
+mass = 100
+color = Color(0.89, 0.31239, 0.3026, 1)

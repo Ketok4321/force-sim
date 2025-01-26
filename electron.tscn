@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnd677l6ijy4m"]
+
+[ext_resource type="Script" path="res://particle.gd" id="1_1tpis"]
+
+[node name="electron" type="Node2D"]
+script = ExtResource("1_1tpis")
+charge = -1
+radius = 5
+color = Color(0.2772, 0.59612, 0.84, 1)
