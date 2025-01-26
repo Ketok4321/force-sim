@@ -4,5 +4,5 @@
 
 [node name="proton" type="Node2D"]
 script = ExtResource("1_kt7by")
-mass = 100
+mass = 50
 color = Color(0.89, 0.31239, 0.3026, 1)
