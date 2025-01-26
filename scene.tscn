@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dppo5ewjowgdc"]
+[gd_scene load_steps=4 format=3 uid="uid://dppo5ewjowgdc"]
 
+[ext_resource type="Script" path="res://scene.gd" id="1_1ouki"]
 [ext_resource type="PackedScene" uid="uid://bo5c85sb1ufhu" path="res://proton.tscn" id="2_hrelj"]
 [ext_resource type="PackedScene" uid="uid://cnd677l6ijy4m" path="res://electron.tscn" id="3_05rhj"]
 
 [node name="Scene" type="Node2D"]
+script = ExtResource("1_1ouki")
+proton = ExtResource("2_hrelj")
+electron = ExtResource("3_05rhj")
 
 [node name="proton" parent="." instance=ExtResource("2_hrelj")]
 position = Vector2(500, 250)
