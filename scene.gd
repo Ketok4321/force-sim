@@ -37,4 +37,4 @@ func _input(event):
 				if _drag_offset != null:
 					_drag_particle.velocity += (event.global_position - _drag_offset) / 2
 		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-			clicked.velocity = Vector2(0, 0)
+			clicked.queue_free()
