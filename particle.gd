@@ -1,7 +1,7 @@
 extends Node2D
 
 const FORCE_STRENGTH = 100000
-const DIST_CUTOFF = 50
+const DIST_CUTOFF = 40
 
 @export var mass = 1
 @export var charge = 1
