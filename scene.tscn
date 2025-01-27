@@ -11,14 +11,13 @@ electron = ExtResource("3_05rhj")
 
 [node name="proton" parent="." instance=ExtResource("2_hrelj")]
 position = Vector2(500, 250)
+charge = 2
+radius = 15
 
 [node name="electron" parent="." instance=ExtResource("3_05rhj")]
 position = Vector2(500, 300)
-velocity = Vector2(44.72, 0)
+velocity = Vector2(59.161, 0)
 
-[node name="proton5" parent="." instance=ExtResource("2_hrelj")]
-position = Vector2(855, 247)
-
-[node name="electron5" parent="." instance=ExtResource("3_05rhj")]
-position = Vector2(855, 297)
-velocity = Vector2(44.72, 0)
+[node name="electron2" parent="." instance=ExtResource("3_05rhj")]
+position = Vector2(500, 200)
+velocity = Vector2(-59.161, 0)

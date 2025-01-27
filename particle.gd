@@ -1,8 +1,7 @@
 extends Node2D
 
 const FORCE_STRENGTH = 100000
-const DIST_CUTOFF = 10
-const COLLISION_FORCE_STRENGTH = 1000
+const DIST_CUTOFF = 50
 
 @export var mass = 1
 @export var charge = 1
@@ -23,9 +22,7 @@ func _process(delta: float) -> void:
 	for instance in all_instances:
 		if instance != self:
 			var dist = position.distance_squared_to(instance.position)
-			var strength = FORCE_STRENGTH * charge * instance.charge / dist
-			if dist < DIST_CUTOFF * DIST_CUTOFF:
-				strength = max(strength, COLLISION_FORCE_STRENGTH)
+			var strength = FORCE_STRENGTH * charge * instance.charge / max(dist, DIST_CUTOFF * DIST_CUTOFF)
 			force += (position - instance.position).normalized() * strength
 
 func _physics_process(delta: float) -> void:
@@ -39,6 +36,6 @@ func _physics_process(delta: float) -> void:
 	if position.x > vsize.x: velocity.x = -abs(velocity.x)
 	if position.y < 0: velocity.y = abs(velocity.y)
 	if position.y > vsize.y: velocity.y = -abs(velocity.y)
-
+	
 func _draw():
 	draw_circle(Vector2(0, 0), radius, color)
