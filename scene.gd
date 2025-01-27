@@ -1,5 +1,7 @@
 extends Node2D
 
+const DRAG_RADIUS = 15
+
 @export var proton: PackedScene
 @export var electron: PackedScene
 
@@ -8,7 +10,7 @@ var _drag_particle = null
 
 func get_clicked(event):
 	for particle in get_tree().get_nodes_in_group("particle"):
-		if event.global_position.distance_squared_to(particle.position) <= particle.radius * particle.radius:
+		if event.global_position.distance_to(particle.position) <= max(particle.radius, DRAG_RADIUS):
 			return particle
 	
 	return null
