@@ -40,3 +40,13 @@ func _input(event):
 					_drag_particle.velocity += (event.global_position - _drag_offset) / 2
 		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			clicked.queue_free()
+
+func _process(delta: float) -> void:
+	var sigma_mv = Vector2(0, 0)
+	
+	var all_instances = get_tree().get_nodes_in_group("particle")
+	
+	for instance in all_instances:
+		sigma_mv += instance.mass * instance.velocity
+
+	print("Σmv = [%f, %f]" % [sigma_mv.x, sigma_mv.y])
