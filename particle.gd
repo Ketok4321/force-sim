@@ -32,10 +32,10 @@ func _physics_process(delta: float) -> void:
 	
 	var vsize = get_viewport().size
 	
-	if position.x < 0: velocity.x = abs(velocity.x)
-	if position.x > vsize.x: velocity.x = -abs(velocity.x)
-	if position.y < 0: velocity.y = abs(velocity.y)
-	if position.y > vsize.y: velocity.y = -abs(velocity.y)
+	if position.x < 0: position.x += vsize.x
+	if position.x > vsize.x: position.x -= vsize.x
+	if position.y < 0: position.y += vsize.y
+	if position.y > vsize.y: position.y += vsize.y
 	
 func _draw():
 	draw_circle(Vector2(0, 0), radius, color)
