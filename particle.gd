@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 	if position.x < 0: position.x += vsize.x
 	if position.x > vsize.x: position.x -= vsize.x
 	if position.y < 0: position.y += vsize.y
-	if position.y > vsize.y: position.y += vsize.y
+	if position.y > vsize.y: position.y -= vsize.y
 	
 func _draw():
 	draw_circle(Vector2(0, 0), radius, color)
